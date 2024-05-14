@@ -1,0 +1,9 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: new_project
+Upstream-Contact: reisvictor1 <reisvictor448@gmail.com>
+Source: https://github.com/courselab/so2-reisvictor1.git
+
+Files: */.dist
+Copyright: reisvictor1 <reisvictor448@gmail.com>
+License: CC0-1.0
+

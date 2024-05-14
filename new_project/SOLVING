@@ -1,0 +1,125 @@
+
+ SOLVING
+ ------------------------------
+
+ reisvictor1 <reisvictor448@gmail.com>
+
+ Implementation exercise 01
+ ------------------------------
+ 
+d. Did not find the 'eg.bin' file. So I could not compare both files
+
+e. The hw.bin disassemble had the following result:
+
+Disassembly of section .data:
+
+00000000 <.data>:
+   0:   b4 00                   mov    $0x0,%ah
+   2:   00 00                   add    %al,(%bx,%si)
+   4:   0e                      push   %cs
+   5:   00 00                   add    %al,(%bx,%si)
+   7:   00 b0 00 00             add    %dh,0x0(%bx,%si)
+   b:   00 48 00                add    %cl,0x0(%bx,%si)
+   e:   00 00                   add    %al,(%bx,%si)
+  10:   cd 00                   int    $0x0
+  12:   00 00                   add    %al,(%bx,%si)
+  14:   10 00                   adc    %al,(%bx,%si)
+  16:   00 00                   add    %al,(%bx,%si)
+  18:   b0 00                   mov    $0x0,%al
+  1a:   00 00                   add    %al,(%bx,%si)
+  1c:   65 00 00                add    %al,%gs:(%bx,%si)
+  1f:   00 cd                   add    %cl,%ch
+  21:   00 00                   add    %al,(%bx,%si)
+  23:   00 10                   add    %dl,(%bx,%si)
+  25:   00 00                   add    %al,(%bx,%si)
+  27:   00 b0 00 00             add    %dh,0x0(%bx,%si)
+  2b:   00 6c 00                add    %ch,0x0(%si)
+  2e:   00 00                   add    %al,(%bx,%si)
+  30:   cd 00                   int    $0x0
+        ...
+ 1fe:   55                      push   %bp
+
+It had some syntax changes compared to the hwasm and hw.S files, but it follows the same pattern of assembling proccess
+
+f. When I ran the qemu it had the following message:
+
+Booting From Hard Disk
+Booting failed: not a bootable disk
+
+Booting from Floppy...
+Booting failed: could not read the boot disk
+
+Booting from DVD/CD
+Booting failed: Could not read from CD/ROM
+No bootable device 
+
+
+g. Could not test into hardware :/
+
+
+i. 
+
+Could not assembly when I used the 'as' directive. It come out with the following:
+
+hw.S: Assembler messages:
+hw.S:2: Error: no such instruction: `bits 16'
+hw.S:4: Error: operand size mismatch for `mov'
+hw.S:6: Error: operand size mismatch for `mov'
+hw.S:7: Error: operand size mismatch for `int'
+hw.S:9: Error: operand size mismatch for `mov'
+hw.S:10: Error: operand size mismatch for `int'
+hw.S:12: Error: operand size mismatch for `mov'
+hw.S:13: Error: operand size mismatch for `int'
+hw.S:15: Error: operand size mismatch for `mov'
+hw.S:16: Error: operand size mismatch for `int'
+hw.S:18: Error: operand size mismatch for `mov'
+hw.S:19: Error: operand size mismatch for `int'
+hw.S:21: Error: operand size mismatch for `mov'
+hw.S:22: Error: operand size mismatch for `int'
+hw.S:24: Error: operand size mismatch for `mov'
+hw.S:25: Error: operand size mismatch for `int'
+hw.S:27: Error: operand size mismatch for `mov'
+hw.S:28: Error: operand size mismatch for `int'
+hw.S:30: Error: operand size mismatch for `mov'
+hw.S:31: Error: operand size mismatch for `int'
+hw.S:33: Error: operand size mismatch for `mov'
+hw.S:34: Error: operand size mismatch for `int'
+hw.S:36: Error: operand size mismatch for `mov'
+hw.S:37: Error: operand size mismatch for `int'
+hw.S:42: Error: no such instruction: `times 510 - ($-$$)db 0'
+hw.S:43: Error: no such instruction: `dw 0xaa55'
+hw.S:47: Error: no such instruction: `notes'
+hw.S:49: Error: no such instruction: `bios interruption 0x10 causes the process flow to jump to the'
+hw.S:50: Error: no such instruction: `interruption vector table area,where there is a pre-loaded BIOS'
+hw.S:51: Error: no such instruction: `routine capable of output characters at the video device.'
+hw.S:53: Error: no such instruction: `this interruption handler routine reads the byte at the 8-bit'
+hw.S:54: Error: no such instruction: `register and send to the video controller. The video operation'
+hw.S:55: Error: no such instruction: `mode (e.g. ascii character)is controlled by register ah.'
+hw.S:56: Error: no such instruction: `after completing the operation,execution flow is returned to'
+hw.S:57: Error: no such instruction: `the next line after 105nt32instruction.'
+hw.S:59: Error: no such instruction: `instruction hlt should cause the processor to halt.'
+hw.S:60: Error: no such instruction: `it is however possible that a hardware interruption could'
+hw.S:61: Error: no such instruction: `cause the processor resume from its halt state. We use an'
+hw.S:62: Error: no such instruction: `infinite loop calling jmp as a safeguard.'
+hw.S:64: Error: no such instruction: `instruction jmp arg performs a jump to the position arg.'
+hw.S:65: Error: no such instruction: `the label 104alt32is the position which jump should reach.'
+hw.S:66: Error: junk `present case' after expression
+hw.S:66: Error: junk `ad hoc alternative to attain the' after expression
+hw.S:66: Error: operand size mismatch for `in'
+hw.S:67: Error: no such instruction: `same result might be'
+hw.S:69: Error: operand size mismatch for `jmp'
+hw.S:71: Error: no such instruction: `here, $ is the current position. Knowing that hlt does not'
+hw.S:72: Error: no such instruction: `take arguments,we need to jmp to the current position minus one.'
+hw.S:74: Error: junk `space' after expression
+hw.S:74: Error: junk `binary (executable)programs often has' after expression
+hw.S:74: Error: operand size mismatch for `in'
+hw.S:75: Error: no such instruction: `a specific structure with several sections other than the code'
+hw.S:76: Error: no such instruction: `code (text)section,data section,etc. Format elf'
+hw.S:77: Error: junk `Linux and format PE in MS Windows are known examples.' after expression
+hw.S:77: Error: operand size mismatch for `in'
+hw.S:78: Error: no such instruction: `the variable $ is actually the offset of the current position with'
+hw.S:79: Error: no such instruction: `respect to the start of the current section,whose position is $$.'
+hw.S:80: Error: no such instruction: `that is why we compute ($-$$)when we use the directive times.'
+hw.S:82: Error: no such instruction: `that said,in the running example we have a flat-binary,with no'
+hw.S:83: Error: no such instruction: `structure. Our program has only one single (implied)section.'
+
