@@ -11,3 +11,18 @@ SOLVING
  Isto é, a função f_list, que lia os file entries.
  Porém não consegui terminar a criação do loadable boot de forma satisfatória até o fim do prazo.
 
+EVALUATION
+==========
+
+Vários arquivos em new_project/mydos são links para syseg, que não está no repositório e,
+por isso, não funcionam. Consegui resolver isso copiando todos o conteudo de syseg para
+o projeto. Depois isso, não consigo executar 'make angraOS.bin', pois o Makefile entra
+em um loop infinito.
+
+Encontrei angraOS.tar.gz. Copiei para outro local, descompactei. Tentei dar build em
+angraOS.img, mas sem sucesso. Consegui construir angraOS.bin e executar. Não tem
+o comando list.
+
+Encontrei então no projeto um subdir new_project/mydos/angraOS.  Dentro dele consegui
+construir angraOS.img, mas sem o comando list.
+
