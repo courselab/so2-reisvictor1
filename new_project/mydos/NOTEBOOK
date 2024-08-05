@@ -26,3 +26,8 @@ o comando list.
 Encontrei então no projeto um subdir new_project/mydos/angraOS.  Dentro dele consegui
 construir angraOS.img, mas sem o comando list.
 
+Correção 2
+----------
+
+Os mesmos problemas foram encontrados. O programa angraOS.bin não extende o código
+original conforme especificado no exercício.

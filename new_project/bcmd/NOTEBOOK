@@ -1,3 +1,10 @@
 #    SPDX-FileCopyrightText: 2024 reisvictor1 <reisvictor448@gmail.com>
 #   
 #    SPDX-License-Identifier: GPL-3.0-or-later
+
+EVALUATION
+==========
+
+Apparently, kernel.c was edited and supplemented with a new function.
+It's not possible to test the functions, though, because no new command was implemented
+by the program, as requested in the exercise specification.
